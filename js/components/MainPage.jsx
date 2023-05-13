@@ -27,7 +27,7 @@ export default function MainPage() {
 	const deleteColor = (event) => {
 		event.preventDefault();
 		const id = event.target.id;
-		console.log(id);
+		// console.log(id);
 		try {
 			fetch(`/api/colors?id=${id}`, {
 				method: 'DELETE',

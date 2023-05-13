@@ -27,9 +27,7 @@ const putColor = async (color) => {
 }
 
 const deleteColor = async (id) => {
-	console.log(id);
 	const collection = await getCollection(COLLECTION_NAME);
-	console.log(id);
 	return collection.deleteOne({_id: new ObjectId(id)});
 }
 

@@ -41,13 +41,13 @@ export default function GeneratePage() {
 		colorData = "";
 		getColorInfo(color)
 					.then(data => {
-						console.log(data);
+						// console.log(data);
 						//colorData = JSON.parse(data);
 						colorData = data;
 						const backgroundColor = colorData.hex.value.toString();
 						const colorName = colorData.name.value.toString();
 						const colorContrast = colorData.contrast.value.toString();
-						console.log(colorContrast)
+						// console.log(colorContrast)
 						document.getElementById("colorBox").style.backgroundColor = backgroundColor;
 						document.getElementById("colorText").innerHTML = '~ ' + colorName + ' ~'
 						document.getElementById("colorBoxText").style.color = colorContrast
@@ -63,22 +63,25 @@ export default function GeneratePage() {
 
 	const insertColorGenerated = (event) => {
 		event.preventDefault();
-		const name = colorData.name.value.toString();
-		const hex_value = colorData.hex.value.toString();
-		const rgb_value = colorData.rgb.value.toString();
-		const cmyk_value = colorData.cmyk.value.toString();
-		const contrast = colorData.contrast.value.toString();
-		const data = {name, hex_value, rgb_value, cmyk_value, contrast}; 
-		fetch("/api/colors", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		}).then(() => {
-			console.log("New color inserted");
-			colorData = "";
-		});
+		if (colorData != '') {
+			const name = colorData.name.value.toString();
+			const hex_value = colorData.hex.value.toString();
+			const rgb_value = colorData.rgb.value.toString();
+			const cmyk_value = colorData.cmyk.value.toString();
+			const contrast = colorData.contrast.value.toString();
+			const data = {name, hex_value, rgb_value, cmyk_value, contrast}; 
+			fetch("/api/colors", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			}).then(() => {
+				console.log("New color inserted");
+				colorData = "";
+			});
+		} 
+
 	}
 
 	return (
