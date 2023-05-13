@@ -84,23 +84,25 @@ export default function GeneratePage() {
 	return (
 		<section className="bg-white dark:bg-gray-900">
 			<div className="container px-6 py-10 mx-auto">
-			<h1 className="w-[500px] mx-auto text-center text-6xl">Colors app</h1>
+			<h1 className="w-[500px] mx-auto text-center text-6xl" 
+			    style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}>Your colors catalog</h1>
 				
                 <div className="w-[1000px] mx-auto text-center mt-4 text-3xl">
 				    <button type="button" 
 				           onClick={handleClick}
 				           className="focus:outline-none focus:ring-4 text-black font-medium rounded-lg text-sm px-4 py-2.5 mr-1 mb-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700">
-				        <div style={{ fontStyle: 'italic' }}>Go to your favorites</div>
+				        <div style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}>Go to your favorites</div>
 				    </button>
 				</div>
-				<p className="w-[1000px] mx-auto center text-center mt-4 text-3xl">Generate color:</p>
+				<p  style={{ fontFamily: 'Georgia' }}
+				    className="w-[1000px] mx-auto center text-center mt-4 text-3xl">Generate color:</p>
 				
 				<div className="w-[1000px] mx-auto text-center mt-4 text-3xl">
-                  <div id='colorText' className="mx-auto p-5">Color</div>
+                  <div id='colorText' className="mx-auto p-5" style={{ fontFamily: 'Georgia' }}>Color</div>
                   <div id='colorBox' 
 				       style={{background: 'white', display: "flex", justifyContent: "center", alignItems: "center", width: '50%', height: '250px', margin: 'auto' }} 
 				       className="rounded-lg shadow-md" >
-                            <div id="colorBoxText"></div>
+                            <div style={{ fontFamily: 'Georgia' }} id="colorBoxText"></div>
 					   </div>
 				</div>
 
@@ -110,13 +112,13 @@ export default function GeneratePage() {
 							onClick={handleGenerate}
 							
 							className="focus:outline-none focus:ring-4 text-black font-medium rounded-lg text-sm px-4 py-2.5 mr-1 mb-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700">
-							<div style={{ fontStyle: 'italic' }}>New color</div>
+							<div style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}>New color</div>
 					</button>
 					
 					<button type="button" 
 							onClick={insertColorGenerated}
 							className="focus:outline-none focus:ring-4 text-black font-medium rounded-lg text-sm px-4 py-2.5 mr-1 mb-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700">
-							<div style={{ fontStyle: 'italic' }}>Add color to your list</div>
+							<div style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}>Add color to your list</div>
 					</button>
 				</div>
 				

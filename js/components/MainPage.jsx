@@ -44,21 +44,23 @@ export default function MainPage() {
 	return (
 		<section className="bg-white dark:bg-gray-900">
 			<div className="container px-4 py-10 mx-auto">
-				<h1 className="w-[500px] mx-auto text-center text-6xl">Colors app</h1>
+				<h1 style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}
+				    className="w-[500px] mx-auto text-center text-6xl">Your colors catalog</h1>
 				
                 <div className="w-[1000px] mx-auto text-center mt-4 text-3xl">
 				    <button type="button" 
 				           onClick={handleClick}
 				           className="focus:outline-none focus:ring-4 text-black font-medium rounded-lg text-sm px-4 py-2.5 mr-1 mb-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700">
-				        <div style={{ fontStyle: 'italic' }}>Generate color</div>
+				        <div style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}>Generate new colors</div>
 				    </button>
 				</div>
-				<p className="w-[1000px] mx-auto text-center mt-4 text-3xl">These are your favorite colors</p>
+				<p  style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}
+				    className="w-[1000px] mx-auto text-center mt-4 text-3xl">These are your favorite colors</p>
 				<div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
 					{colors.map(color => (
 						<div
 							key={color._id}
-							style={{background: color.hex_value.toString() }}
+							style={{background: color.hex_value.toString(), fontFamily: 'Georgia' }}
 							className="block max-w-sm p-6 rounded-lg">
 
 							<div 
@@ -83,6 +85,7 @@ export default function MainPage() {
 								<button type="button"
 								        id={color._id}
 								        onClick={deleteColor}
+										style={{ fontWeight: 'bold' }}
 								        className="focus:outline-none focus:ring-4 text-black font-medium rounded-lg text-sm px-4 py-2.5 mr-1 mb-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700">
 											<div style={{ fontStyle: 'italic' }}>Delete color</div>
 											
