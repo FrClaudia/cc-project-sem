@@ -1,7 +1,6 @@
 // js/components/MainPage.jsx
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-// import ButtonRedirect from "@/js/components/Redirect";
 
 export default function MainPage() {
 	const [colors, setColors] = useState([]);
@@ -62,12 +61,22 @@ export default function MainPage() {
 							style={{background: color.hex_value.toString() }}
 							className="block max-w-sm p-6 rounded-lg">
 
-							<div className="block max-w-sm p-4 rounded-lg bg-white rounded-lg shadow hover:bg-gray-100 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700" >
+							<div 
+							    className="block max-w-sm p-4 rounded-lg bg-white rounded-lg shadow hover:bg-gray-100 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700" >
 								<h5 className="flex justify-center mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 light:text-black">
 									{color.name}
 								</h5>
 								<div className="flex justify-center mt-4 font-bold text-black">
-									{color.hex_value}
+									HEX {color.hex_value}
+								</div>
+								<div className="flex justify-center mt-4 font-normal text-black">
+									RGB {color.rgb_value}
+								</div>
+								<div className="flex justify-center mt-4 font-normal text-black">
+									CMYK {color.cmyk_value}
+								</div>
+								<div className="flex justify-center mt-4 font-normal text-black">
+									CMYK {color.contrast}
 								</div>
 							</div>	
 							<div className={"flex justify-center mt-4"}>
