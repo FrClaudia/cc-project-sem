@@ -43,10 +43,10 @@ export default function MainPage() {
 	}
 
 	return (
-		<section className="bg-white dark:bg-gray-900">
-			<div className="container px-4 py-10 mx-auto">
+		<section className="bg-white dark:bg-gray-900" style = {{background: "linear-gradient(to top, black, #243B55)"}} > 
+			<div className="container px-6 py-10 mx-auto">
 				<h1 style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}
-				    className="w-[500px] mx-auto text-center text-6xl">Your colors catalog</h1>
+				    className="w-[500px] mx-auto text-center text-6xl">Colors catalog</h1>
 				
                 <div className="w-[1000px] mx-auto text-center mt-4 text-3xl">
 				    <button type="button" 
@@ -56,7 +56,7 @@ export default function MainPage() {
 				    </button>
 				</div>
 				<p  style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}
-				    className="w-[1000px] mx-auto text-center mt-4 text-3xl">These are your favorite colors</p>
+				    className="w-[1000px] mx-auto text-center mt-4 text-3xl ">These are your favorite colors</p>
 				<div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
 					{colors.map(color => (
 						<div
@@ -65,7 +65,7 @@ export default function MainPage() {
 							className="block max-w-sm p-6 rounded-lg">
 
 							<div 
-							    className="block max-w-sm p-4 rounded-lg bg-white rounded-lg shadow hover:bg-gray-100 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700" >
+							    className="block max-w-sm p-4 rounded-lg bg-white rounded-lg shadow hover:bg-gray-300 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700" >
 								<h5 className="flex justify-center mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 light:text-black">
 									{color.name}
 								</h5>
@@ -73,13 +73,13 @@ export default function MainPage() {
 									HEX {color.hex_value}
 								</div>
 								<div className="flex justify-center mt-4 font-normal text-black">
-									RGB {color.rgb_value}
+									{color.rgb_value}
 								</div>
 								<div className="flex justify-center mt-4 font-normal text-black">
-									CMYK {color.cmyk_value}
+									{color.cmyk_value}
 								</div>
 								<div className="flex justify-center mt-4 font-normal text-black">
-									CMYK {color.contrast}
+									contrast {color.contrast}
 								</div>
 							</div>	
 							<div className={"flex justify-center mt-4"}>
@@ -87,7 +87,7 @@ export default function MainPage() {
 								        id={color._id}
 								        onClick={deleteColor}
 										style={{ fontWeight: 'bold' }}
-								        className="focus:outline-none focus:ring-4 text-black font-medium rounded-lg text-sm px-4 py-2.5 mr-1 mb-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700">
+								        className="focus:outline-none focus:ring-4 text-black font-medium rounded-lg text-sm px-4 py-2.5 mr-1 mb-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-300 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700">
 										Delete color
 											
 								</button>
