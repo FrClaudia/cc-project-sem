@@ -55,8 +55,8 @@ export default function MainPage() {
 				        <div style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}>Generate new colors</div>
 				    </button>
 				</div>
-				<p  style={{ fontWeight: 'bold', fontFamily: 'Georgia' }}
-				    className="w-[1000px] mx-auto text-center mt-4 text-3xl ">These are your favorite colors</p>
+				<p  style={{ fontStyle: 'italic', fontFamily: 'Georgia' }}
+				    className="w-[1000px] mx-auto text-center mt-4 text-3xl ">List of your favorite colors:</p>
 				<div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
 					{colors.map(color => (
 						<div
