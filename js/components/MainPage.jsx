@@ -27,6 +27,7 @@ export default function MainPage() {
 	const deleteColor = (event) => {
 		event.preventDefault();
 		const id = event.target.id;
+		console.log(id);
 		try {
 			fetch(`/api/colors?id=${id}`, {
 				method: 'DELETE',
@@ -87,7 +88,7 @@ export default function MainPage() {
 								        onClick={deleteColor}
 										style={{ fontWeight: 'bold' }}
 								        className="focus:outline-none focus:ring-4 text-black font-medium rounded-lg text-sm px-4 py-2.5 mr-1 mb-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700">
-											<div style={{ fontStyle: 'italic' }}>Delete color</div>
+										Delete color
 											
 								</button>
 							</div>
