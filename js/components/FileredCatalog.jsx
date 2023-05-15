@@ -70,7 +70,7 @@ export default function FilteredCatalog() {
 				    className="w-[1000px] mx-auto text-center mt-4 text-3xl ">
                         List of your favorite colors <span style={{ fontWeight: 'bold' }}>filtered</span>:
                 </p>
-                <p style={{marginTop: '20px', fontStyle: 'italic', fontFamily: 'Georgia'}}>Filter colors:</p>
+                <p style={{marginTop: '20px', fontStyle: 'italic', fontFamily: 'Georgia'}}>Filter colors by name:</p>
                 <input 
                     type="text" 
                     value={searchText} 
@@ -82,7 +82,7 @@ export default function FilteredCatalog() {
                             <div key={color._id}
                             style={{background: color.hex_value.toString(), fontFamily: 'Georgia' }}
 							className="block max-w-sm p-6 rounded-lg">
-                             							<div 
+                             	<div 
 							    className="block max-w-sm p-4 rounded-lg bg-white rounded-lg shadow hover:bg-gray-300 light:bg-gray-800 light:border-gray-700 light:hover:bg-gray-700" >
 								<h5 className="flex justify-center mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 light:text-black">
 									{color.name}
