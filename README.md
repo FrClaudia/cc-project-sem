@@ -12,13 +12,18 @@ Link înregistrare YouTube (unlisted): https://youtu.be/goO83rZ6tW8
 Aplicația 'Colors Catalog' este o soluție ce oferă o interfață prietenoasă, plăcută pentru utilizator, cu o pagină în care să vizualizeze lista de culori preferate (cu informațiile despre ele și cu opțiunea de ștergere), o pagină în care poate să genereze culori (cu opțiunea de a le salva pe cele preferate în listă) și o pagină în care poate să filtreze lista de culori. Se salvează mai multe date despre culori în baza de date: nume, hex, rgb, cymk, culoare de contrast. Astfel, aplicația este utilă pentru oricine dorește să aleagă culori noi, armonioase și estetice pentru diferite proiecte, avându-le mereu la îndemână prin funcția de salvare a preferatelor.
 
 ## 3. Descriere API
-Pentru a obține date despre culorile generate, care apoi vor fi salvate în baza de date, este apelat un API gratuit https://www.thecolorapi.com, care returnează informații despre culoarea menționată în request, într-un anumit format ales.. 
+Pentru a obține date despre culorile generate, care apoi vor fi salvate în baza de date, este apelat un API gratuit https://www.thecolorapi.com, care returnează informații despre culoarea menționată în request, într-un anumit format ales. 
 Un request GET este de tipul: 
 https://www.thecolorapi.com/id?hex=0047AB&rgb=0,71,171&hsl=215,100%,34%&cmyk=100,58,0,33&format=html
 
-De asemenea, aplicația folosește o bază de date în Cloud, și anume MongoDB. Mongo Atlas este un serviciu MongoDB care pune la dispoziția clienților servere de baze de date NoSQL scalabile și flexibile, complet gestionate, atât în varianta gratuită (folosită în această aplicație), cât și în cea cu plată. Acest serviciu elimină nevoia de a instala, actualiza, monitoriza și asigura securitatea bazelor de date, deoarece aceste operații sunt realizate de către experții MongoDB. Informațiile despre culorile adăugate la preferate de utilizator se stochează în baza de date, în colecția “colors”. Conectarea în aplicație se face printr-un connection string unic al bazei de date. Pentru conectarea locală la baza de date am folosit MongoDB Compass. Câteva exemple de date salvate în bază se pot observa în imaginea din documentația Word.
-
-Vercel este un serviciu de cloud ce oferă o platformă dezvoltatorilor pentru crearea și livrarea de aplicații web. Se concentrează pe viteză, performanță și livrare instantanee a aplicațiilor. Principala tehnologie pe care se bazează Vercel este Next.js, un framework popular de dezvoltare web bazat pe React.js, tehnologie utilizată și în acest proiect. Vercel oferă un mediu de dezvoltare ușor de utilizat, fiind popular printre dezvoltatori pentru crearea aplicațiilor web. Pentru utilizarea non-comercială sau hobby, acest serviciu oferă un plan gratuit, dar există și planuri cu plată. În imaginea din documentație se poate observa o previzualizare a deployment-ului aplicației dezvoltate pe Vercel.
+De asemenea, aplicația folosește o bază de date în Cloud, și anume MongoDB. Mongo Atlas este un serviciu MongoDB care pune la dispoziția clienților servere de baze de date NoSQL scalabile și flexibile, complet gestionate, atât în varianta gratuită (folosită în această aplicație), cât și în cea cu plată. Acest serviciu elimină nevoia de a instala, actualiza, monitoriza și asigura securitatea bazelor de date, deoarece aceste operații sunt realizate de către experții MongoDB. 
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/mongo_1.jpeg]
+Informațiile despre culorile adăugate la preferate de utilizator se stochează în baza de date, în colecția “colors”. Conectarea în aplicație se face printr-un connection string unic al bazei de date. Pentru conectarea locală la baza de date am folosit MongoDB Compass. Câteva exemple de date salvate în bază se pot observa în imaginea din documentația Word sau de pe linkul urmator.
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/mongo_2.jpeg]
+Vercel este un serviciu de cloud ce oferă o platformă dezvoltatorilor pentru crearea și livrarea de aplicații web. Se concentrează pe viteză, performanță și livrare instantanee a aplicațiilor. Principala tehnologie pe care se bazează Vercel este Next.js, un framework popular de dezvoltare web bazat pe React.js, tehnologie utilizată și în acest proiect. Vercel oferă un mediu de dezvoltare ușor de utilizat, fiind popular printre dezvoltatori pentru crearea aplicațiilor web. Pentru utilizarea non-comercială sau hobby, acest serviciu oferă un plan gratuit, dar există și planuri cu plată.
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/vercel_2_pricing.jpeg]
+În imaginea din documentație se poate observa o previzualizare a deployment-ului aplicației dezvoltate pe Vercel.
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/vercel_1_deployment.jpeg]
 
 ## 4. Flux de date - exemple de request / response & metode HTTP
 În aplicație se folosesc metode HTTP de tip GET, DELETE, POST.
@@ -164,8 +169,11 @@ Există de asemenea un buton pentru a salva culoarea și informațiile furnizate
 Utilizatorul primește un mesaj de succes după ce salvează o culoare.
 
 ## 5. Capturi ecran aplicație
-Imagini din aplicație se pot găsi în documentația Word. 
+Imagini din aplicație se pot găsi si în documentația Word. 
 Capturile de ecran cuprind: pagina principală a aplicației, pagina pentru filtrare listă culori după nume, pagina de generare și adăugare culori.
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/1_main_page_catalog.jpeg]
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/2_page_filter_catalog.jpeg]
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/3_page_generate_add_color.jpeg]
 
 ## 6. Referințe
 [The Color API Docs] https://www.thecolorapi.com/docs 
