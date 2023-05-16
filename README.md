@@ -1,5 +1,5 @@
 ## PROIECT CLOUD COMPUTING - COLORS CATALOG APPLICATION 
-## Claudia Ioana Frincu, SIMPRE
+## Claudia Ioana Frincu, SIMPRE, grupa 1119
 
 ## 1. Introducere
 Cloud computing permite accesul la resurse prin intermediul internetului. Utilizatorii pot alege inclusiv resurse gratuite, iar pentru cele cu plată, se va plăti doar pentru ceea ce folosesc. Beneficiile includ flexibilitate, scalabilitate și reducerea costurilor.
