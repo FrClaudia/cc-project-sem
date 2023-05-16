@@ -4,9 +4,9 @@
 ## 1. Introducere
 Cloud computing permite accesul la resurse prin intermediul internetului. Utilizatorii pot alege inclusiv resurse gratuite, iar pentru cele cu plată, se va plăti doar pentru ceea ce folosesc. Beneficiile includ flexibilitate, scalabilitate și reducerea costurilor.
 Aplicația creată în acest proiect răspunde nevoii utilizatorilor de a avea o modalitate rapidă de a găsi culori noi pentru proiectele lor și de a avea mereu la îndemână o listă cu culorile preferate.
-Link publicare aplicație: https://cc-project-sem.vercel.app
-Link GitHub: https://github.com/FrClaudia/cc-project-sem 
-Link înregistrare YouTube (unlisted): https://youtu.be/goO83rZ6tW8
+<br>Link publicare aplicație: https://cc-project-sem.vercel.app 
+<br>Link GitHub: https://github.com/FrClaudia/cc-project-sem 
+<br>Link înregistrare YouTube (unlisted): https://youtu.be/goO83rZ6tW8
 
 ## 2. Descriere problemă
 Aplicația 'Colors Catalog' este o soluție ce oferă o interfață prietenoasă, plăcută pentru utilizator, cu o pagină în care să vizualizeze lista de culori preferate (cu informațiile despre ele și cu opțiunea de ștergere), o pagină în care poate să genereze culori (cu opțiunea de a le salva pe cele preferate în listă) și o pagină în care poate să filtreze lista de culori. Se salvează mai multe date despre culori în baza de date: nume, hex, rgb, cymk, culoare de contrast. Astfel, aplicația este utilă pentru oricine dorește să aleagă culori noi, armonioase și estetice pentru diferite proiecte, avându-le mereu la îndemână prin funcția de salvare a preferatelor.
@@ -14,22 +14,22 @@ Aplicația 'Colors Catalog' este o soluție ce oferă o interfață prietenoasă
 ## 3. Descriere API
 Pentru a obține date despre culorile generate, care apoi vor fi salvate în baza de date, este apelat un API gratuit https://www.thecolorapi.com, care returnează informații despre culoarea menționată în request, într-un anumit format ales. 
 Un request GET este de tipul: 
-https://www.thecolorapi.com/id?hex=0047AB&rgb=0,71,171&hsl=215,100%,34%&cmyk=100,58,0,33&format=html
+https://www.thecolorapi.com/id?hex=0047AB&rgb=0,71,171&hsl=215,100%,34%&cmyk=100,58,0,33&format=html<br>
 
 De asemenea, aplicația folosește o bază de date în Cloud, și anume MongoDB. Mongo Atlas este un serviciu MongoDB care pune la dispoziția clienților servere de baze de date NoSQL scalabile și flexibile, complet gestionate, atât în varianta gratuită (folosită în această aplicație), cât și în cea cu plată. Acest serviciu elimină nevoia de a instala, actualiza, monitoriza și asigura securitatea bazelor de date, deoarece aceste operații sunt realizate de către experții MongoDB. 
-[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/mongo_1.jpeg]
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/mongo_1.jpeg] <br>
 Informațiile despre culorile adăugate la preferate de utilizator se stochează în baza de date, în colecția “colors”. Conectarea în aplicație se face printr-un connection string unic al bazei de date. Pentru conectarea locală la baza de date am folosit MongoDB Compass. Câteva exemple de date salvate în bază se pot observa în imaginea din documentația PDF sau de pe linkul urmator.
-[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/mongo_2.jpeg]
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/mongo_2.jpeg]<br>
 Vercel este un serviciu de cloud ce oferă o platformă dezvoltatorilor pentru crearea și livrarea de aplicații web. Se concentrează pe viteză, performanță și livrare instantanee a aplicațiilor. Principala tehnologie pe care se bazează Vercel este Next.js, un framework popular de dezvoltare web bazat pe React.js, tehnologie utilizată și în acest proiect. Vercel oferă un mediu de dezvoltare ușor de utilizat, fiind popular printre dezvoltatori pentru crearea aplicațiilor web. Pentru utilizarea non-comercială sau hobby, acest serviciu oferă un plan gratuit, dar există și planuri cu plată.
-[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/vercel_2_pricing.jpeg]
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/vercel_2_pricing.jpeg]<br>
 În imaginea din documentație se poate observa o previzualizare a deployment-ului aplicației dezvoltate pe Vercel.
-[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/vercel_1_deployment.jpeg]
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/vercel_1_deployment.jpeg]<br>
 
 ## 4. Flux de date - exemple de request / response & metode HTTP
 În aplicație se folosesc metode HTTP de tip GET, DELETE, POST.
-În prima pagină, utilizatorul poate vizualiza toate informațiile despre culorile salvate în baza de date (preluarea acestor date se face printr-un request GET) și are opțiunea de a șterge fiecare culoare din baza de date (ștergerea se face printr-un request DELETE).
-Exemplu request GET: https://cc-project-sem.vercel.app/api/colors
-Acest request se face astfel în MainPage.jsx:
+În prima pagină, utilizatorul poate vizualiza toate informațiile despre culorile salvate în baza de date (preluarea acestor date se face printr-un request GET) și are opțiunea de a șterge fiecare culoare din baza de date (ștergerea se face printr-un request DELETE).<br>
+Exemplu request GET: https://cc-project-sem.vercel.app/api/colors<br>
+Acest request se face astfel în MainPage.jsx:<br>
 ```
     useEffect(() => {
         try{
@@ -102,9 +102,9 @@ Apoi, datele se vor afișa în interfață:
                     ))}
                 </div>
 ```
-Din pagina principală există două fluxuri posibile.
-Unul dintre ele este de a accesa o pagină în care culorile salvate se pot filtra după nume. Inițial, culorile se preiau din baza de date (prin GET), iar în funcție de input-ul utilizatorului se filtrează lista obținută și se afișează.
-Celălalt flux este de a accesa o pagină în care se pot genera culori prin apăsarea unui buton, afișându-se culoarea, denumirea și codul hex. 
+Din pagina principală există două fluxuri posibile.<br>
+Unul dintre ele este de a accesa o pagină în care culorile salvate se pot filtra după nume. Inițial, culorile se preiau din baza de date (prin GET), iar în funcție de input-ul utilizatorului se filtrează lista obținută și se afișează.<br>
+Celălalt flux este de a accesa o pagină în care se pot genera culori prin apăsarea unui buton, afișându-se culoarea, denumirea și codul hex. <br>
 La fiecare apăsare pe butonul de generare culoare nouă, se apelează o funcție care face un request de tip GET cu codul hex către un API (thecolorapi) care răspunde cu informații despre culoarea respectivă.
 ```
     async function getColorInfo(hexCode) {
@@ -119,7 +119,7 @@ La fiecare apăsare pe butonul de generare culoare nouă, se apelează o funcți
         }
       }
 ```
-Un exemplu de request GET: https://www.thecolorapi.com/id?format=json&hex=0047AB.
+Un exemplu de request GET: https://www.thecolorapi.com/id?format=json&hex=0047AB.<br>
 Pentru request-ul GET de mai sus, response-ul din care se iau informații (hex, rgb, name, cmyk, contrast) este de forma:
 ```
 {   "hex": { "value": "#0047AB", "clean": "0047AB" },
@@ -169,15 +169,15 @@ Există de asemenea un buton pentru a salva culoarea și informațiile furnizate
 Utilizatorul primește un mesaj de succes după ce salvează o culoare.
 
 ## 5. Capturi ecran aplicație
-Imagini din aplicație se pot găsi si în documentația PDF. 
-Capturile de ecran cuprind: pagina principală a aplicației, pagina pentru filtrare listă culori după nume, pagina de generare și adăugare culori.
-[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/1_main_page_catalog.jpeg]
-[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/2_page_filter_catalog.jpeg]
+Imagini din aplicație se pot găsi si în documentația PDF. <br>
+Capturile de ecran cuprind: pagina principală a aplicației, pagina pentru filtrare listă culori după nume, pagina de generare și adăugare culori.<br>
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/1_main_page_catalog.jpeg]<br>
+[https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/2_page_filter_catalog.jpeg]<br>
 [https://github.com/FrClaudia/cc-project-sem/blob/main/pictures_documentation/3_page_generate_add_color.jpeg]
 
 ## 6. Referințe
-[The Color API Docs] https://www.thecolorapi.com/docs 
-[MongoDB Documentation] https://www.mongodb.com/docs/ 
-[Cum sa faci in cloud un cluster gratuit de MongoDB] https://askit.ro/solutii/cum-sa-faci-in-cloud-un-cluster-gratuit-de-mongodb/
-[Vercel Documentation] https://vercel.com/docs
-[9 platforme de găzduire prietenoase pentru dezvoltatori pentru a implementa aplicații SaaS] https://tipstrick.ro/9-platforme-de-gazduire-prietenoase-pentru-dezvoltatori-pentru-a-implementa-aplicatii-saas/
+[The Color API Docs] https://www.thecolorapi.com/docs <br>
+[MongoDB Documentation] https://www.mongodb.com/docs/ <br>
+[Cum sa faci in cloud un cluster gratuit de MongoDB] https://askit.ro/solutii/cum-sa-faci-in-cloud-un-cluster-gratuit-de-mongodb/ <br>
+[Vercel Documentation] https://vercel.com/docs <br>
+[9 platforme de găzduire prietenoase pentru dezvoltatori pentru a implementa aplicații SaaS] https://tipstrick.ro/9-platforme-de-gazduire-prietenoase-pentru-dezvoltatori-pentru-a-implementa-aplicatii-saas/ 
